@@ -1,2 +1,2 @@
 # myawstoolbox
-Utilities for managing AWS resource
+Utilities for managing AWS resources
