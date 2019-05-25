@@ -1,0 +1,12 @@
+#!/bin/bash
+# This tool is used to upload file to S3 and share with others by generating presigned url
+
+export AWS_DEFAULT_PROFILE=china
+
+if [ -z "$1" ]
+then
+    echo "Usage: $0 Filename"
+else
+    filename=$(basename $1)
+    aws s3 cp $1 s3://linjungz-share-bjs/$filename
+fi
