@@ -15,6 +15,7 @@ then
     echo "Adding rules for security group ..."
     aws ec2 authorize-security-group-ingress --group-id $sg --protocol tcp --port 22 --cidr 0.0.0.0/0
     aws ec2 authorize-security-group-ingress --group-id $sg --protocol tcp --port 8181 --cidr 0.0.0.0/0
+    echo "Link for Cloud9: http://52.82.99.59:8181"
     exit 0
 elif [ $operation == "off" ]
 then
